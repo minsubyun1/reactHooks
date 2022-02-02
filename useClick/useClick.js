@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import ReactDOM from "react-dom";
 
-const useClick = (onClick) =>{
+export const useClick = (onClick) =>{
   if(typeof onClick !=="function"){
     return
   }

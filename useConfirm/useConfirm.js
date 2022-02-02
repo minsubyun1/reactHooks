@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import ReactDOM from "react-dom";
 
 export const useConfirm = (message = "", callback, rejection) => {
-  if (!callback && typeof callback !== "function") {
+  if (!callback || typeof callback !== "function") {
     return;
   }
   if(rejection && typeof rejection !=="function"){
