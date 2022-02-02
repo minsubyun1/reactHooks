@@ -7,7 +7,7 @@ setTimeout(() => potato.current.focus(), 5000); 처럼
 import React, { useEffect, useRef, useState } from "react";
 import ReactDOM from "react-dom";
 
-/*const useClick = (onClick) =>{
+const useClick = (onClick) =>{
   const element = useRef()
   useEffect(() =>{
     if(element.current){
@@ -22,13 +22,13 @@ const App = () => {
   const title = useClick(sayHello);
   return (
     <div className="App">
-      <h1 ref={title}>Hi</h1>
+    //  <h1 ref={title}>Hi</h1>
     </div>
   );
 };
 
 const rootElement = document.getElementById("root");
-ReactDOM.render(<App />, rootElement); */
+ReactDOM.render(<App />, rootElement); 
 
 코드를 정리해보면, useClick을 사용해서 useRef()를 만들었고, 해당 reference를 리턴하여 title에 지정해주었다. 그리고 useEffect를 통해 reference 안에 element.current가 있는지 확인하고, 있다면 Click 이벤트를 부여하도록 구성하였다. 클릭하면 console에 say hello를 보여준다. reference를 통해 작동시켜 본 것이다. 그러나 이 이론에서 중요한 것 중 하나는 어느 정도 코드를 clean up(정리) 해줘야 한다는 것이다. -> componentWillUnMount가 될 때 addEventListener를 지워주어야 한다. 
 이를 위해서는 function을 return할 필요가 있다. 
