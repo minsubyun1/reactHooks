@@ -1,3 +1,4 @@
+# useClick
 이번에는 useClick hooks를 만들어보자.
 useClick은 매우 간단한 훅이지만 references가 뭔지 설명해보기 위해 살펴보자. reference란 무엇일까?
 reference는 기본적으로 우리의 component의 특정 부분을 선택할 수 있는 방법인데(document.getElementById()를 사용하는 것처럼..), react에 있는 모든 component는 reference element를 가지고 있다. 이를 활용하면 input을 선택했을 때 그걸 가지고 내가 원하는 모든 것을 할 수 있다. 예를 들어  
